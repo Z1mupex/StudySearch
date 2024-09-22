@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 
+import music from "../assets/music.mp3";
+
 const BackgroundMusic = ({ Align }) => {
 	const [isMuted, setIsMuted] = useState(true);
 	const audioRef = useRef(null);
@@ -39,7 +41,7 @@ const BackgroundMusic = ({ Align }) => {
 
 	return (
 		<div className='fixed top-4 right-4'>
-			<audio ref={audioRef} src='src/assets/music.mp3' loop />
+			<audio ref={audioRef} src={music} loop />
 			<button className='btn btn-square' onClick={toggleMute}>
 				<img
 					src={
